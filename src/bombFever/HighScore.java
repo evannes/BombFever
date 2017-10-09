@@ -69,6 +69,12 @@ public class HighScore {
         }
     }
 
+    /**
+     * Arranges high scores in correct order according to the highest scores.
+     * Also removes all scores that are lower than the top ten values.
+     * @param listInput list of high scores
+     * @return          the updated list of high scores
+     */
     private List<List<String>> rearrangeHighScores(List<List<String>> listInput){
 
         List<List<String>> newList = new ArrayList<>(2);
@@ -102,7 +108,6 @@ public class HighScore {
                 }
             }
         }
-
         return newList;
     }
 
@@ -129,9 +134,9 @@ public class HighScore {
     }
 
     /**
-     *
-     * @param text
-     * @param path
+     * Writes text to a file.
+     * @param text  text to be written
+     * @param path  the file path
      */
     private void writeToFile(String text,String path){
         File textFile = new File(path);
@@ -144,6 +149,9 @@ public class HighScore {
         }
     }
 
+    /**
+     * Erases all content from a text file.
+     */
     public void eraseFile(){
         String fileContent = getFileContent();
         if(fileContent != null || !fileContent.equals("")) {

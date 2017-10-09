@@ -9,18 +9,16 @@ import java.util.regex.Pattern;
  * Class for parsing JSON.
  * Created by Elise Haram Vannes on 17.07.2017.
  */
-public class JsonParser { // Statiske metoder? Kun kalle på JsonParser.create2DJsonArray()
-                            // istedenfor å opprette objekt?
+public class JsonParser {
 
-    // privat standard-konstrukør hindrer opprettelse av objekt av denne klassen
+    // private standard constructor that prevents objects being created of this class
     private JsonParser(){}
 
-    /*
-    Programmeringsregel:  En metode som kan utføre oppgaven sin ved hjelp av den informasjonen
-    den får gjennom sine parameterverdier (og ikke noe annet), kan og skal settes opp (deklareres)
-    som statisk. Den er «seg selv nok».
+    /**
+     * Creates a JSON-array in a String.
+     * @param list  the 2D-list that will be converted
+     * @return      the String containing the JSON-array
      */
-
     public static String create2DJsonArray(List<List<String>> list){
 
         String jsonArray = "";
@@ -41,18 +39,15 @@ public class JsonParser { // Statiske metoder? Kun kalle på JsonParser.create2D
             }
 
         }
-
-        //System.out.println(jsonArray);
         return jsonArray;
     }
 
-    public static List<List<String>> readJsonArray(String fullText){ // legge inn int itemsPerBolk ?
-        // regEx: \{(.*?)\} henter ut alt (unntatt newlines) mellom { og }
-        // \{([^]+)\}   som over, men med new lines
-
-        // \"([^,{}"]+)\"    plukker ut det som er mellom "" men uten komma eller {}, så "hei","hade" blir delt i to
-        // bruker deretter ([^,{}"]+)   for å hente ut teksten UTEN ""
-        // finnes en annen lettere måte  String.split("); ??
+    /**
+     * Reads a JSON-array of this particular type, and converts it to a 2D-List containing Strings.
+     * @param fullText  the text containing the whole JSON-array
+     * @return          returns the text converted to a 2D-List
+     */
+    public static List<List<String>> readJsonArray(String fullText){
 
         ArrayList<String> firstDivider = new ArrayList<>();
 
