@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #e3ffb6;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bombFever.StartScreenController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="876.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="235.0" fitWidth="266.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/player1b.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="170.0" top="60.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label text="BOMBFEVER">
+               <font>
+                  <Font name="AR DARLING" size="49.5" />
+               </font>
+               <VBox.margin>
+                  <Insets left="151.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="toScene2" mnemonicParsing="false" onAction="#changeScene" prefHeight="67.0" prefWidth="313.0" style="-fx-background-color: #a1ed6f;" text="NEW GAME">
+               <VBox.margin>
+                  <Insets left="150.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="AR DARLING" size="38.0" />
+               </font>
+            </Button>
+            <Button layoutX="180.0" layoutY="328.0" mnemonicParsing="false" onAction="#showHighScores" prefHeight="78.0" prefWidth="313.0" style="-fx-background-color: #a1ed6f;" text="HIGH SCORES">
+               <font>
+                  <Font name="AR DARLING" size="38.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="150.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="180.0" layoutY="328.0" mnemonicParsing="false" onAction="#quit" prefHeight="67.0" prefWidth="313.0" style="-fx-background-color: #a1ed6f;" text="QUIT">
+               <font>
+                  <Font name="AR DARLING" size="38.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="150.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children></VBox>
+   </center>
+   <left>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
