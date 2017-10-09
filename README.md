@@ -1,2 +1,2 @@
 # BombFever
-![main screen](BombFever/screenshots/Bomberman.png)
+![main screen](https://raw.githubusercontent.com/evannes/BombFever/master/screenshots/Bomberman.png)
