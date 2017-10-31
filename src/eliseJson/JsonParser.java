@@ -20,26 +20,25 @@ public class JsonParser {
      * @return      the String containing the JSON-array
      */
     public static String create2DJsonArray(List<List<String>> list){
-
-        String jsonArray = "";
+        StringBuilder jsonArray = new StringBuilder();
 
         for(int i = 0; i < list.get(0).size(); i++){
-            jsonArray += "{";
+            jsonArray.append("{");
             for(int j = 0; j < list.size(); j++){
 
-                jsonArray += "\"" + list.get(j).get(i) + "\"";
+                jsonArray.append("\"" + list.get(j).get(i) + "\"");
 
                 if(j  == list.size()-1) {
-                    jsonArray += "}";
+                    jsonArray.append("}");
                 }
 
                 if(!(i == list.get(0).size()-1 && j == list.size()-1)){
-                    jsonArray += ",";
+                    jsonArray.append(",");
                 }
             }
 
         }
-        return jsonArray;
+        return jsonArray.toString();
     }
 
     /**
