@@ -26,7 +26,7 @@ public class JsonParser {
             jsonArray.append("{");
             for(int j = 0; j < list.size(); j++){
 
-                jsonArray.append("\"" + list.get(j).get(i) + "\"");
+                jsonArray.append("\"").append(list.get(j).get(i)).append("\"");
 
                 if(j  == list.size()-1) {
                     jsonArray.append("}");
